@@ -1,8 +1,9 @@
 from llm import get_llm_response
+from utils import extract_python_code
 
 
 def main():
-    print("=== AI Code Interpreter (Day 1 - HuggingFace) ===")
+    print("=== AI Code Interpreter ===")
 
     while True:
         user_input = input("\nEnter your request (or type 'exit'): ")
@@ -12,8 +13,14 @@ def main():
 
         response = get_llm_response(user_input)
 
-        print("\n--- LLM Response ---")
+        print("\n--- RAW LLM Response ---")
         print(response)
+
+        ##Extract code
+        code = extract_python_code(response)
+
+        print("\n--- Extracted Python Code ---")
+        print(code)
 
 
 if __name__ == "__main__":
