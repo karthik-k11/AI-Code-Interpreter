@@ -1,6 +1,6 @@
 import re
 
-##Block dangerous keywords
+##Block DANGEROUS KEYWORDS
 DANGEROUS_KEYWORDS = [
     "import os",
     "import sys",
@@ -15,25 +15,26 @@ DANGEROUS_KEYWORDS = [
 
 def extract_python_code(text: str) -> str:
 
+    ##Case 1: ```python blocks
     pattern = r"```python(.*?)```"
     matches = re.findall(pattern, text, re.DOTALL)
 
     if matches:
-        return matches[0].strip()  ##To take ONLY FIRST block
+        return matches[0].strip()
 
+    ##Case 2: ``` generic blocks
     pattern_generic = r"```(.*?)```"
     matches = re.findall(pattern_generic, text, re.DOTALL)
 
     if matches:
         return matches[0].strip()
 
-    return "No Python code found."
+    ##Case 3: Plain code (no markdown)
+    return text.strip()
 
 
 def is_code_safe(code: str) -> bool:
-
     for keyword in DANGEROUS_KEYWORDS:
         if keyword in code:
             return False
-
     return True
