@@ -20,9 +20,9 @@ def execute_code(code: str, file_path: str = None) -> str:
         result = output.getvalue().strip()
 
         if not result:
-            return "✅ Code executed successfully (no output)"
+            return "Code executed successfully (no output)"
 
         return result
 
     except Exception as e:
-        return f"❌ Execution Error: {str(e)}"
+        return f"Execution Error: {str(e)}"
