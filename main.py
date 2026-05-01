@@ -12,22 +12,27 @@ def main():
         if user_input.lower() == "exit":
             break
 
+        file_path = input("Enter file path (or press Enter to skip): ").strip()
+
+        if file_path == "":
+            file_path = None
+
         ##LLM
-        response = get_llm_response(user_input)
+        response = get_llm_response(user_input, file_path)
 
         print("\n--- RAW LLM Response ---")
         print(response)
 
-        ##Extract ONLY first code block
+        ##Extract
         code = extract_python_code(response)
 
         print("\n--- Extracted Python Code ---")
         print(code)
 
-        ##Safety check
+        ##Safety
         if not is_code_safe(code):
             print("\n--- BLOCKED ---")
-            print("Unsafe code detected. Execution stopped.")
+            print("Unsafe code detected.")
             continue
 
         ##Execute
