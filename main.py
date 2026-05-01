@@ -38,7 +38,7 @@ def main():
         ##Execute
         result = execute_code(code)
 
-        print("\n--- Execution Output ---")
+        print("\n=== RESULT ===")
         print(result)
 
 
