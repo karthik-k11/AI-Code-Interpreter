@@ -36,7 +36,7 @@ def main():
             continue
 
         ##Execute
-        result = execute_code(code)
+        result = execute_code(code, file_path)
 
         print("\n=== RESULT ===")
         print(result)
