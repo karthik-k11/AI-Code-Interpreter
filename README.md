@@ -78,3 +78,15 @@ Output:
 First rows
 Summary statistics
 ```
+
+## Safety Features
+
+- Blocks dangerous imports (os, sys, etc.)
+- Prevents file/system manipulation
+- Controlled execution environment
+
+## Future Improvements
+- Docker sandbox execution
+- Support for more file types (JSON, Excel)
+- Web UI (Streamlit / React)
+- Better code selection from LLM
