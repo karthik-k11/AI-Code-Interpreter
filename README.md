@@ -36,3 +36,15 @@ User Input → LLM → Code Extraction → Safety Check → Execution → Output
 git clone https://github.com/your-username/ai-code-interpreter.git
 cd ai-code-interpreter
 ```
+### 2. Install dependencies
+
+pip install -r requirements.txt
+
+### 3. Add API key
+
+Create .env file:
+
+GROQ_API_KEY=your_api_key_here
+
+### 4. Run project
+python main.py
