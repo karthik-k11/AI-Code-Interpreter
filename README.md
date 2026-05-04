@@ -53,20 +53,28 @@ python main.py
 ```
 ## Example Usage
 #### ➤ Basic
+```bash
 Enter your request:
 Write Python code to reverse a string
+```
 
 Output:
-
+```bash
 !dlroW ,olleH
+```
 #### ➤ CSV Analysis
+
+```bash
 Enter your request:
 Analyze the CSV file and show summary
 
+
 Enter file path:
 data/sample.csv
+```
 
 Output:
-
+```bash
 First rows
 Summary statistics
+```
