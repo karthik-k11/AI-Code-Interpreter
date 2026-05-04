@@ -51,3 +51,22 @@ GROQ_API_KEY=your_api_key_here
 ```bash
 python main.py
 ```
+## Example Usage
+#### ➤ Basic
+Enter your request:
+Write Python code to reverse a string
+
+Output:
+
+!dlroW ,olleH
+#### ➤ CSV Analysis
+Enter your request:
+Analyze the CSV file and show summary
+
+Enter file path:
+data/sample.csv
+
+Output:
+
+First rows
+Summary statistics
