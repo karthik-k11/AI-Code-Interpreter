@@ -37,8 +37,9 @@ git clone https://github.com/your-username/ai-code-interpreter.git
 cd ai-code-interpreter
 ```
 ### 2. Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Add API key
 
